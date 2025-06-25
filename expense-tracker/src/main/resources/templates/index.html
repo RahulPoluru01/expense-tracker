@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+<h1>Expense Tracker</h1>
+
+<!-- Add/Edit Expense Form -->
+<h2 id="formTitle">Add New Expense</h2>
+<form id="expenseForm">
+    <input type="hidden" id="editingId" />
+
+    <input type="text" id="description" placeholder="Description" required />
+    <input type="number" id="amount" placeholder="Amount" required />
+    <input type="text" id="category" placeholder="Category" required />
+    <input type="date" id="date" required />
+
+    <button type="submit" id="submitButton">Add Expense</button>
+</form>
+
+<hr>
+
+<!-- View Expenses -->
+<h2>All Expenses</h2>
+
+<!-- 🔽 Category Filter -->
+<label for="categoryFilter">Filter by Category:</label>
+<select id="categoryFilter" onchange="applyFilter()">
+    <option value="all">All</option>
+    <option value="Food">Food</option>
+    <option value="Travel">Travel</option>
+    <option value="Bills">Bills</option>
+    <option value="Groceries">Groceries</option>
+</select>
+
+<button onclick="fetchExpenses()">Refresh Expenses</button>
+<ul id="expenseList"></ul>
+
+<hr>
+
+<!-- Summary -->
+<h2>Summary</h2>
+<button onclick="getSummary()">View Summary</button>
+<p id="summaryAmount"></p>
+</body>
+</html>
