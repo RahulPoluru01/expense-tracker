@@ -8,7 +8,7 @@ Technologies used:
 -H2(hypersonic Relational database): A java SQL in-memory database for realtime data storage.
 IDE/Tool: Intellj idea
 
-installtion:
+installtion and steps:
 1.Install Intellj community version and complete basic setup
 2.clone the repository: $ git clone
 https://github.com/rahu1choudhary/expense-tracker.git
