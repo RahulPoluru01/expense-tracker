@@ -9,4 +9,5 @@ public class HtmlController {
     public String home() {
         return "index"; // returns index.html from templates/
     }
+
 }

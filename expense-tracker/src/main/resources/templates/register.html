@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" th:href="@{/css/signup.css}" />
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="container">
+    <h2>Sign Up</h2>
+    <form th:action="@{/register}" method="post" class="signup-form">
+        <input type="text" name="username" placeholder="Choose username" required />
+        <input type="password" name="password" placeholder="Choose password" required />
+        <button type="submit">Register</button>
+    </form>
+    <p class="login-link">Already registered? <a th:href="@{/login}">Login here</a></p>
+</div>
+</body>
+</html>
